@@ -208,12 +208,22 @@ html_sidebars = {
     "index": ["search-button-field"],
     "**": ["search-button-field", "sidebar-nav-bs"]
 }
-
+html_js_files = ['custom-icons.js',]  # defines custom icon(s) used in header
 html_theme_options = {
-    "github_url": "https://github.com/scipy/scipy",
-    "twitter_url": "https://twitter.com/SciPy_team",
     "header_links_before_dropdown": 6,
-    "icon_links": [],
+    "icon_links": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/scipy/scipy",
+        "icon": "fa-brands fa-github",
+      },
+      {
+        "name": "Scientific Python Forum",
+        "url": "https://discuss.scientific-python.org/c/contributor/scipy/",
+        "icon": "fa-custom fa-SciPy_Forum", # defined in file `custom-icons.js`
+        "type": "fontawesome",
+      },
+    ],
     "logo": {
         "text": "SciPy",
     },
